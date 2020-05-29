@@ -19,7 +19,8 @@ void CTesterInfo::ReadInfo()
         qDebug() <<"打开文件失败！";
     }else{
         while(fread(&tmp,sizeof(tmp),1,fd)>0){
-            //qDebug() <<tmp.name<<tmp.age<<tmp.date<<tmp.type;
+//            qDebug() << "read:" << tmp.number<<tmp.group<<tmp.research<<tmp.name<<tmp.identity<<
+//                        tmp.tel<<tmp.department<<tmp.classes<< tmp.weight<<tmp.vision;
             info.push_back(tmp);
         }
     }
@@ -31,6 +32,7 @@ void CTesterInfo::ReadInfo()
 void CTesterInfo::WirteInfo()
 {
     msg tmp;
+    int i=1;
     int length=0;
     FILE *fd = fopen("testerinfo.txt","w+");
     length=info.size();
@@ -39,31 +41,49 @@ void CTesterInfo::WirteInfo()
         //通过迭代器取出链表内容，写入文件
         for (QList<msg>::iterator it = info.begin(); it != info.end(); it++)
         {
-            tmp.age=it->age;
+            tmp.number=i;
+            tmp.group=it->group;
+            tmp.research=it->research;
             memcpy(tmp.name,it->name,20);
-            memcpy(tmp.date,it->date,30);
-            memcpy(tmp.type,it->type,50);
+            memcpy(tmp.identity,it->identity,20);
+            memcpy(tmp.tel,it->tel,20);
+            memcpy(tmp.department,it->department,20);
+            memcpy(tmp.classes,it->classes,20);
+            tmp.weight=it->weight;
+            tmp.vision=it->vision;
             fwrite(&tmp,sizeof(tmp),1,fd);
-            //qDebug() << "info:" << tmp.name<<tmp.age<<tmp.date<<tmp.type;
+            i++;
+//            qDebug() << "write:" << tmp.number<<tmp.group<<tmp.research<<tmp.name<<tmp.identity<<
+//                        tmp.tel<<tmp.department<<tmp.classes<< tmp.weight<<tmp.vision;
         }
     }
     fclose(fd);
 }
 
 //添加新被试
-void CTesterInfo::AddInfo(QString name, QString age,QString date,QString type)
+void CTesterInfo::AddInfo(int group,int research,QString name, QString identity,
+                          QString tel, QString department,QString classes, float  weight,float vision)
 {
     msg tmp;
+    int num=0;
     std::string tr;
     if(!name.isEmpty()){
-        tmp.age=age.toInt();
+        num+=1;
+        tmp.number=num;
+        tmp.research=research;
+        tmp.group=group;
         tr=name.toStdString();
         memcpy(tmp.name,tr.data(),20);
-        memcpy(tmp.date,date.toLatin1().data(),30);
-        tr=type.toStdString();
-        memcpy(tmp.type,tr.data(),50);
-        qDebug() << "start:" << name<<age<<date<<type;
-        qDebug() << "add:" << tmp.name<<tmp.age<<tmp.date<<tmp.type;
+        memcpy(tmp.identity,identity.toLatin1().data(),20);
+        memcpy(tmp.tel,tel.toLatin1().data(),20);
+        tr=department.toStdString();
+        memcpy(tmp.department,tr.data(),20);
+        tr=classes.toStdString();
+        memcpy(tmp.classes,tr.data(),20);
+        tmp.weight=weight;
+        tmp.vision=vision;
+//        qDebug() << "add:" << tmp.number<<tmp.group<<tmp.research<<tmp.name<<tmp.identity<<
+//                    tmp.tel<<tmp.department<<tmp.classes<< tmp.weight<<tmp.vision;
         info.push_back(tmp);
     }
 }

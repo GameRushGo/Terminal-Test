@@ -14,9 +14,15 @@ class TesterAddDialog : public QDialog
 public:
     explicit TesterAddDialog(QWidget *parent = nullptr);
     ~TesterAddDialog();
-    QString name ;
-    QString age;
-    QString type;
+    int group;
+    int research;
+    QString name;
+    QString identity;
+    QString tel;
+    QString department;
+    QString classes;
+    float weight;
+    float vision;
 
 private slots:
     void on_buttonBox_accepted();

@@ -128,7 +128,7 @@ QString QSQLite::SearchInfo(QString usernameedit)//根据用户名查找密码
     QSqlQuery sql_query;
     QString sqlpassword;
     QString username;
-    int id;
+    int id=0;
     //QString strid = QString::number(id);
 
     QString select_sql = "select * from admin ";

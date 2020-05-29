@@ -34,6 +34,8 @@ public:
     QPushButton *pushButton_4;
     QPushButton *pushButton_5;
     QPushButton *pushButton_6;
+    QPushButton *pushButton_10;
+    QPushButton *pushButton_11;
     QPushButton *pushButton_7;
     QPushButton *pushButton_3;
     QPushButton *pushButton;
@@ -81,6 +83,16 @@ public:
         pushButton_6->setObjectName(QString::fromUtf8("pushButton_6"));
 
         verticalLayout->addWidget(pushButton_6);
+
+        pushButton_10 = new QPushButton(verticalLayoutWidget);
+        pushButton_10->setObjectName(QString::fromUtf8("pushButton_10"));
+
+        verticalLayout->addWidget(pushButton_10);
+
+        pushButton_11 = new QPushButton(verticalLayoutWidget);
+        pushButton_11->setObjectName(QString::fromUtf8("pushButton_11"));
+
+        verticalLayout->addWidget(pushButton_11);
 
         pushButton_7 = new QPushButton(verticalLayoutWidget);
         pushButton_7->setObjectName(QString::fromUtf8("pushButton_7"));
@@ -142,6 +154,8 @@ public:
         pushButton_4->setText(QCoreApplication::translate("MainWindow", "\346\211\213\347\234\274\345\215\217\350\260\203", nullptr));
         pushButton_5->setText(QCoreApplication::translate("MainWindow", "\346\217\222\351\222\210", nullptr));
         pushButton_6->setText(QCoreApplication::translate("MainWindow", "\347\277\273\347\211\214", nullptr));
+        pushButton_10->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        pushButton_11->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
         pushButton_7->setText(QCoreApplication::translate("MainWindow", "\345\243\260\351\237\263\345\214\271\351\205\215", nullptr));
         pushButton_3->setText(QCoreApplication::translate("MainWindow", "\345\220\257\345\212\250\350\204\221\347\224\265\347\250\213\345\272\217", nullptr));
         pushButton->setText(QCoreApplication::translate("MainWindow", "\350\242\253\350\257\225\351\200\211\346\213\251", nullptr));

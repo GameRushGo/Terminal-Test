@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>717</width>
-    <height>356</height>
+    <width>1028</width>
+    <height>473</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,12 +16,22 @@
   <widget class="QTableWidget" name="tableWidget">
    <property name="geometry">
     <rect>
-     <x>100</x>
+     <x>30</x>
      <y>20</y>
-     <width>511</width>
-     <height>261</height>
+     <width>911</width>
+     <height>321</height>
     </rect>
    </property>
+   <column>
+    <property name="text">
+     <string>组</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>研究</string>
+    </property>
+   </column>
    <column>
     <property name="text">
      <string>姓名</string>
@@ -29,25 +39,40 @@
    </column>
    <column>
     <property name="text">
-     <string>年龄</string>
+     <string>身份证号</string>
     </property>
    </column>
    <column>
     <property name="text">
-     <string>测试时间</string>
+     <string>联系电话</string>
     </property>
    </column>
    <column>
     <property name="text">
-     <string>测试类型</string>
+     <string>联系方式</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>班级</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>体重</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>视力</string>
     </property>
    </column>
   </widget>
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>310</y>
+     <x>330</x>
+     <y>370</y>
      <width>320</width>
      <height>25</height>
     </rect>
