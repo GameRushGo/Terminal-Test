@@ -1,4 +1,5 @@
 QT       += core gui
+QT += sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -17,19 +18,32 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     ctesterinfo.cpp \
+    logindialog.cpp \
     main.cpp \
     mainwindow.cpp \
+    managedata.cpp \
+    managedialog.cpp \
+    qsqlite.cpp \
+    registerdialog.cpp \
     testeradddialog.cpp \
     testinfodialog.cpp
 
 HEADERS += \
     ctesterinfo.h \
+    logindialog.h \
     mainwindow.h \
+    managedata.h \
+    managedialog.h \
+    qsqlite.h \
+    registerdialog.h \
     testeradddialog.h \
     testinfodialog.h
 
 FORMS += \
+    logindialog.ui \
     mainwindow.ui \
+    managedialog.ui \
+    registerdialog.ui \
     testeradddialog.ui \
     testinfodialog.ui
 

@@ -275,6 +275,7 @@ Makefile: ../gamesystem.pro E:/QT/5.14.2/mingw73_64/mkspecs/win32-g++/qmake.conf
 		../gamesystem.pro \
 		E:/QT/5.14.2/mingw73_64/lib/Qt5Widgets.prl \
 		E:/QT/5.14.2/mingw73_64/lib/Qt5Gui.prl \
+		E:/QT/5.14.2/mingw73_64/lib/Qt5Sql.prl \
 		E:/QT/5.14.2/mingw73_64/lib/Qt5Core.prl \
 		E:/QT/5.14.2/mingw73_64/lib/qtmain.prl \
 		E:/QT/5.14.2/mingw73_64/mkspecs/features/build_pass.prf
@@ -484,6 +485,7 @@ E:/QT/5.14.2/mingw73_64/mkspecs/features/lex.prf:
 ../gamesystem.pro:
 E:/QT/5.14.2/mingw73_64/lib/Qt5Widgets.prl:
 E:/QT/5.14.2/mingw73_64/lib/Qt5Gui.prl:
+E:/QT/5.14.2/mingw73_64/lib/Qt5Sql.prl:
 E:/QT/5.14.2/mingw73_64/lib/Qt5Core.prl:
 E:/QT/5.14.2/mingw73_64/lib/qtmain.prl:
 E:/QT/5.14.2/mingw73_64/mkspecs/features/build_pass.prf:

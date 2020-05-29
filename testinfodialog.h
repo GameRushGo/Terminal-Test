@@ -16,7 +16,7 @@ public:
     ~TestInfoDialog();
     void infoinit();
     void infoupdate();
-
+    QString testername;
 private slots:
     void on_pushButton_clicked();
 

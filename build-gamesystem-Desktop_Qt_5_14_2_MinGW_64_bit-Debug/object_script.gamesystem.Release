@@ -1,0 +1,16 @@
+release/ctesterinfo.o
+release/logindialog.o
+release/main.o
+release/mainwindow.o
+release/managedata.o
+release/managedialog.o
+release/qsqlite.o
+release/registerdialog.o
+release/testeradddialog.o
+release/testinfodialog.o
+release/moc_logindialog.o
+release/moc_mainwindow.o
+release/moc_managedialog.o
+release/moc_registerdialog.o
+release/moc_testeradddialog.o
+release/moc_testinfodialog.o

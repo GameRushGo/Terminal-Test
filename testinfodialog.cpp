@@ -134,10 +134,11 @@ void TestInfoDialog::on_pushButton_2_clicked()//修改
 
 }
 
-void TestInfoDialog::on_pushButton_4_clicked()
+void TestInfoDialog::on_pushButton_4_clicked()//确定按钮
 {
     QTableWidgetItem * item = ui->tableWidget->currentItem();
     if(item==Q_NULLPTR)return;
-    QString name=ui->tableWidget->item(item->row(),0)->text();
+    testername=ui->tableWidget->item(item->row(),0)->text();
     accept();
+
 }
